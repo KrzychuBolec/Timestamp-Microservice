@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/KrzychuBolec/Timestamp-Microservice/issues"
   },
-  "homepage": "https://github.com/KrzychuBolec/Timestamp-Microservice#readme"
+  "homepage": "https://github.com/KrzychuBolec/Timestamp-Microservice#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
