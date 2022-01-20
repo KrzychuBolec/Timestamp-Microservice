@@ -9,11 +9,11 @@ let formatDate = (date) => {
       let newDate = new Date(dateValues[0], dateValues[1] - 1, dateValues[2]);
       return {
         unix: newDate.getTime(),
-        utc: newDate.toString(),
+        utc: newDate.toUTCString(),
       };
     } else {
       let newDate = new Date(parseInt(date));
-      return { unix: parseInt(date), utc: newDate.toString() };
+      return { unix: parseInt(date), utc: newDate.toUTCString() };
     }
   } else {
     return { error: "Invalid Date" };
