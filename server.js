@@ -2,8 +2,11 @@ var express = require(`express`);
 const res = require("express/lib/response");
 var app = express();
 var handlers = require("./handlers.js");
+var cors = require("cors");
 
 app.use("/public", express.static(__dirname + "/public"));
+
+app.use(cors({ optionsSuccessStatus: 200 }));
 
 app.get("/", handlers.setHomepage);
 
