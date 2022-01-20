@@ -15,6 +15,6 @@ app.get("/", () => {
 
 app.get("/api/:date", handlers.queryHandle);
 
-app.listen(1988, () => {
-  console.log("Server is listening on port 5000");
+const listener = app.listen(process.env.PORT || 3000, function () {
+  console.log("Your app is listening on port " + listener.address().port);
 });
