@@ -16,7 +16,7 @@ let formatDate = (date) => {
       return { unix: parseInt(date), utc: newDate.toString() };
     }
   } else {
-    return { error: "Invalid date" };
+    return { error: "Invalid Date" };
   }
 };
 
