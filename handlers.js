@@ -9,10 +9,10 @@ let setHomepage = (req, res) => {
 let queryHandle = (req, res) => {
   let date = Functions.formatDate(req.params.date);
   if (date == "Invalid date") {
-    console.log(date);
+    console.log(date + " " + req.method + req.params);
     res.status(404).json(date);
   } else {
-    console.log(date);
+    console.log(date + " " + req.method + req.params);
     res.status(200).json(date);
   }
 };
