@@ -3,21 +3,20 @@ let formatDate = (date) => {
 
   let dateValues = [];
 
-  if (regex.test(date) ||date =="") {
+  if (regex.test(date) || date == "") {
     if (date.includes("-")) {
       dateValues = date.split("-");
       let newDate = new Date(dateValues[0], dateValues[1] - 1, dateValues[2]);
       return {
         unix: newDate.getTime(),
-        utc: newDate,
+        utc: newDate.toString(),
       };
     } else {
       let newDate = new Date(parseInt(date));
-      return { unix: parseInt(date), utc: newDate };
+      return { unix: parseInt(date), utc: newDate.toString() };
     }
-  }
-  else{
-      return {error: "Invalid date"}
+  } else {
+    return { error: "Invalid date" };
   }
 };
 
