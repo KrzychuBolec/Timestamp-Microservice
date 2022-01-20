@@ -5,13 +5,7 @@ var handlers = require("./handlers.js");
 
 app.use("/public", express.static(__dirname + "/public"));
 
-app.get("/", () => {
-  try {
-    handlers.setHomepage;
-  } catch (err) {
-    console.log(err);
-  }
-});
+app.get("/", handlers.setHomepage);
 
 app.get("/api/:date", handlers.queryHandle);
 
